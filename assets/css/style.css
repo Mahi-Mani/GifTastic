@@ -1,0 +1,18 @@
+.inline{
+    float:left;
+    padding:50px;
+    margin-top:5px;
+    position: absolute;
+}
+p{
+    float:left;
+    padding:5px;
+    margin-top:5px;
+    position: relative;
+}
+/* .flex-parent{
+    display:flex;
+} */
+body{
+    background-color: red;
+}
