@@ -1,8 +1,8 @@
 .inline{
-    float:left;
-    padding:50px;
-    margin-top:5px;
-    position: absolute;
+    /* float:left; */
+    padding:10px;
+    /* margin-top:5px; */
+    /* position: absolute; */
 }
 p{
     float:left;
@@ -13,6 +13,6 @@ p{
 /* .flex-parent{
     display:flex;
 } */
-body{
-    background-color: red;
+.animalClass{
+    margin:10px;
 }
