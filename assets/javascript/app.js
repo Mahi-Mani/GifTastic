@@ -2,9 +2,8 @@
 var animals = ["Lion","Tiger"];
 var input;
 var i;
-// var limit = 10;
-// var queryURL = "https://api.giphy.com/v1/gifs/" + xT4uQulxzV39haRFjG + "?api_key=fwPvz04E3buxTZ95FnxM8IJwGBRPT7dZ";
 
+// Function that displays gif images when button is clicked
 function searchGif(){
     $("#allDiv").show();
     var animal = $(this).attr("data-name");
@@ -42,9 +41,9 @@ function searchGif(){
         $(".row").prepend("<br><hr>");
         }
 });
-
 }
 
+// Function that displays random additional gif when clicked Add Additional GIF button
 function randomGif(event){
   event.preventDefault();
   // var animal = $(this).attr("data-name");
@@ -70,26 +69,17 @@ function randomGif(event){
       newimageTag.attr("data-still",gifs.images.downsized_still.url);
       newimageTag.attr("data-animate",gifs.images.fixed_height.url);
       newimageTag.attr("data-state","still");
-      // var rating = gifs.rating;
-      // var newp = $("<p>").text("");
-      // newp.addClass("column");
-      // console.log("Rating: "+rating);
       var title = gifs.title;
       newimageDiv.append(newimageTag);
       newimageDiv.prepend("<p>"+ title + "</p>");
       // newimageDiv.prepend("<p>Rating : " + rating + "</p>");
       $("#allDiv").show();
       $(".row").prepend(newimageDiv);
-
       $(".row").prepend("<br>");
-    
-
-
 });
-
 }
  
-        // To pause gif image when clicked
+        // To pause and play gif image when clicked
         $(document).on("click",".animalGif",function(){
           var state = $(this).attr("data-state");
           // console.log("State :"+state+"of animal "+animals[i]);
@@ -104,8 +94,6 @@ function randomGif(event){
             $(this).attr("src",still);
             $(this).attr("data-state","still");
           }
-        
-        
         });
 
 
@@ -117,7 +105,6 @@ function randomGif(event){
 
         // Looping through the array of animals
         for (i = 0; i < animals.length; i++) {
-          // <button type="submit" class="btn btn-primary"id="addAnimal">Add</button>
 
           var newButton = $("<button>");
           newButton.addClass("animalClass btn btn-success");
@@ -136,6 +123,7 @@ function randomGif(event){
         generateButton();
       });
 
+      // Clear button clears all DOM elements and user entered value
       $("#clear").on("click",function(event){
         event.preventDefault();
         $("#allDiv").hide();
@@ -144,9 +132,9 @@ function randomGif(event){
 
       });
 
-
+      // SearchGif function is called
       $(document).on("click",".animalClass",searchGif);
       $("#addGif").on("click", randomGif);
 
-      
+      // Creates button when is loaded initially
       generateButton();
