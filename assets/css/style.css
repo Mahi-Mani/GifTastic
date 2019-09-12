@@ -1,18 +1,33 @@
-.inline{
-    /* float:left; */
-    padding:10px;
-    /* margin-top:5px; */
-    /* position: absolute; */
+* {
+  box-sizing: border-box;
+}
+#allDiv{
+  display: flex;
+  flex-direction: row ;
+  flex-wrap: wrap;
+  color: red;
+  /* border: solid; */
+  padding:5px;
+}
+
+.col-md-3{
+  /* order: 5; */
+}
+img{
+  padding:5px;
+  margin:15px;
 }
 p{
-    float:left;
-    padding:5px;
-    margin-top:5px;
-    position: relative;
+  /* padding: 10px; */
+  margin:15px;
 }
-/* .flex-parent{
-    display:flex;
-} */
-.animalClass{
+
+.animalClass,
+#addAnimal,
+#addGif,
+#clear{
     margin:10px;
 }
+
+
+ 
